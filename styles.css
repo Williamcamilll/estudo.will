@@ -1,0 +1,373 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte mais moderna e elegante */
+    line-height: 1.6;
+    background-color: #f5f5f5; /* Cinza claro mais suave */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(to right, #e91e63, #2196f3); /* Gradiente vermelho-azul */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    flex: 1; 
+}
+
+header #datetime {
+    font-size: 1em;
+    margin-right: 20px;
+}
+
+/* Barra de Pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+.search-bar input {
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    flex: 1; 
+}
+
+.search-bar button {
+    padding: 8px;
+    font-size: 1em;
+    background-color: #f44336; /* Vermelho */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #d32f2f; /* Vermelho mais escuro no hover */
+}
+
+/* Menu de Navegação */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center; 
+}
+
+nav li {
+    margin: 0 10px; 
+}
+
+nav a {
+    color: #fff; 
+    text-decoration: none;
+    padding: 8px 12px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo transparente branco no hover */
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(135deg, #e91e63 0%, #2196f3 100%); /* Gradiente vermelho-azul */
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    perspective: 1000px; 
+}
+
+.banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+    transform: rotateY(15deg); 
+    animation: bannerAnimation 5s infinite alternate; 
+}
+
+@keyframes bannerAnimation {
+    from {
+        transform: rotateY(15deg);
+    }
+    to {
+        transform: rotateY(-15deg);
+    }
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 40px 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    position: relative;
+    color: #333;
+    text-align: center;
+}
+
+h2::after { 
+    content: '';
+    width: 50px;
+    height: 5px;
+    background-color: #e91e63; /* Vermelho */
+    display: block;
+    margin: 10px auto;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+    color: #555;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ol, ul {
+    margin: 15px 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* Código */
+pre {
+    background: #eee;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; 
+}
+
+code { 
+    font-family: monospace; 
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+th {
+    background-color: #2196f3; /* Azul */
+    color: #fff;
+}
+
+/* Botão de Alternância de Tema */
+#toggle-theme {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #555;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+#toggle-theme:hover {
+    background-color: #333;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Modo Escuro */
+body.dark-theme {
+    background-color: #121212;
+    color: #ccc;
+}
+
+body.dark-theme header {
+    background: linear-gradient(to right, #c62828, #1565c0); /* Gradiente vermelho-azul escuro */
+}
+
+body.dark-theme footer {
+    background: #1f1f1f;
+}
+
+body.dark-theme table th {
+    background-color: #333;
+}
+
+body.dark-theme .search-bar input {
+    background-color: #333;
+    color: #f0f0f0;
+    border-color: #555;
+}
+
+body.dark-theme pre {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+/* Destaque de Pesquisa */
+mark {
+    background-color: yellow;
+    color: black;
+}
+
+/* Seções de Projetos, Blog, Contato e Sobre */
+#projetos .project,
+#blog article,
+#contato,
+#sobre {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+#projetos .project img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius:     5px; 
+}
+
+/* Seções */
+section {
+    padding: 40px 20px; /* Aumenta o padding para mais espaço */
+    background-color: #fff; /* Fundo branco para as seções */
+    margin-bottom: 30px; /* Espaçamento entre as seções */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Contato */
+#contato form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contato label {
+    margin-bottom: 5px;
+    font-weight: bold; /* Destaca os labels */
+}
+
+#contato input,
+#contato textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contato button[type="submit"] {
+    background-color: #2196f3; /* Azul */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+#contato button[type="submit"]:hover {
+    background-color: #1565c0; 
+}
+
+/* Animações */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes highlightAnimation {
+    from { background-color: yellow; }
+    to { background-color: transparent; color: inherit; }
+}
+
+@keyframes flip {
+    0% { transform: perspective(400px) rotateY(0deg); }
+    100% { transform: perspective(400px) rotateY(180deg); }
+}
+
+@keyframes rotate3D {
+    0% { transform: rotate3d(0, 1, 0, 0deg); }
+    100% { transform: rotate3d(0, 1, 0, 360deg); }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+@keyframes scaleDown {
+    from { transform: scale(1.1); }
+    to { transform: scale(1); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header .header-content {
+        flex-direction: column; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0; 
+    }
+
+    .banner-content {
+        transform: none; 
+        animation: none;
+    }
+}
+
+
+    
